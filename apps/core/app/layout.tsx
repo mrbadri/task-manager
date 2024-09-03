@@ -18,7 +18,7 @@ export default function RootLayout({
 }): JSX.Element {
   return (
     <html lang="en" className="h-full">
-      <body className={cn(inter.className, "h-ful")}>
+      <body className={cn(inter.className, "h-full")}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
