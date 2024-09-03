@@ -3,14 +3,24 @@ import Link from "next/link";
 import { Button } from "@repo/ui/components/button";
 import { Input } from "@repo/ui/components/input";
 import { Label } from "@repo/ui/components/label";
-import GridPattern from "@repo/ui/components/grid-pattern";
+import GridPattern from "@repo/ui/components/animated-grid-pattern";
+import { cn } from "@repo/ui/lib/utils";
 
 const LoginPage = () => {
   return (
     <div className="w-full h-full  lg:grid lg:min-h-[600px] lg:grid-cols-2 xl:min-h-[800px]">
       {/* Background Pattern */}
       <div className="hidden bg-muted lg:block relative shadow-[inset_-14px_1px_38px_-15px_#1d1d1d]">
-        <GridPattern />
+        <GridPattern
+          numSquares={30}
+          maxOpacity={0.1}
+          duration={3}
+          repeatDelay={1}
+          className={cn(
+            "[mask-image:radial-gradient(500px_circle_at_center,white,transparent)]",
+            "inset-x-0 inset-y-[-30%] h-[200%] skew-y-12",
+          )}
+        />
       </div>
 
       {/* Login Form */}

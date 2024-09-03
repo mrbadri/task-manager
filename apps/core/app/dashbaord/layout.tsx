@@ -11,10 +11,5 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }): JSX.Element {
-  return (
-    <main>
-      <HeaderLanding></HeaderLanding>
-      {children}
-    </main>
-  );
+  return <main>{children}</main>;
 }
