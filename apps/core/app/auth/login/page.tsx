@@ -10,7 +10,7 @@ const LoginPage = () => {
   return (
     <div className="w-full h-full  lg:grid lg:min-h-[600px] lg:grid-cols-2 xl:min-h-[800px]">
       {/* Background Pattern */}
-      <div className="hidden bg-muted lg:block relative shadow-[inset_-14px_1px_38px_-15px_#1d1d1d]">
+      <div className="hidden bg-muted/20 lg:block relative shadow-[inset_-14px_1px_38px_-15px_red]">
         <GridPattern
           numSquares={30}
           maxOpacity={0.1}
@@ -24,7 +24,7 @@ const LoginPage = () => {
       </div>
 
       {/* Login Form */}
-      <div className="flex items-center justify-center py-12">
+      <div className="flex items-center justify-center  py-12">
         <div className="mx-auto grid w-[350px] gap-6">
           <div className="grid gap-2 text-center">
             <h1 className="text-3xl font-bold">Login</h1>
