@@ -8,9 +8,9 @@ import { cn } from "@repo/ui/lib/utils";
 
 const LoginPage = () => {
   return (
-    <div className="w-full h-full  lg:grid lg:min-h-[600px] lg:grid-cols-2 xl:min-h-[800px]">
+    <div className="w-full h-full bg-muted/20 overflow-hidden lg:grid lg:min-h-[600px] lg:grid-cols-2 xl:min-h-[800px] ">
       {/* Background Pattern */}
-      <div className="hidden bg-muted/20 lg:block relative shadow-[inset_-14px_1px_38px_-15px_red]">
+      <div className="hidden  lg:block relative shadow-[inset_-14px_1px_38px_-15px_background">
         <GridPattern
           numSquares={30}
           maxOpacity={0.1}
@@ -21,6 +21,11 @@ const LoginPage = () => {
             "inset-x-0 inset-y-[-30%] h-[200%] skew-y-12",
           )}
         />
+        <div className="relative z-10 flex items-center justify-center  h-full">
+          <h1 className="text-9xl font-bold bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 bg-clip-text text-transparent shadow-lg">
+            FOCUS
+          </h1>
+        </div>
       </div>
 
       {/* Login Form */}
