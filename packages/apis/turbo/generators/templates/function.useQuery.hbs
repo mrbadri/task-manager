@@ -9,7 +9,7 @@ import {
   {{pascalCase method}}{{pascalCase name}}ResponseTransformed,
 } from "./{{method}}-{{kebabCase name}}.types";
 
-const {{method}}{{pascalCase name}}URL = () => path.join("/api/account/{{kebabCase name}}");
+const {{method}}{{pascalCase name}}URL = () => path.join("/api/{{kebabCase name}}");
 
 export const {{method}}{{pascalCase name}} = async (
   props: {{pascalCase method}}{{pascalCase name}}Request,
