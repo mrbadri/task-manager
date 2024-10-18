@@ -8,7 +8,7 @@ export type RequestHandlerOptions = {
   isMock?: boolean;
 };
 
-export type RequestHandlerProps<T extends ZodTypeAny> = [
+export type RequestHandlerProps<T extends ZodTypeAny = ZodTypeAny> = [
   callback: () => Promise<ApiResponse<z.infer<T>>>,
   schema: T,
   options?: RequestHandlerOptions | undefined,
@@ -25,11 +25,11 @@ export const requestHandler = async <T extends ZodTypeAny>(
   });
 
   if (isMock)
-    return delay<ApiResponse<z.infer<typeof schema>>>({
+    return await delay<ApiResponse<z.infer<typeof schema>>>({
       data: mockData,
     });
 
-  return callback();
+  return await callback();
 };
 
 export default requestHandler;

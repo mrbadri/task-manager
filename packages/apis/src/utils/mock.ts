@@ -1,8 +1,5 @@
 import axios from "axios";
 import { ApiResponse } from "../types/api.types";
-import { generateMock } from "@anatine/zod-mock";
-import delay from "./delay";
-import { ZodAny } from "zod";
 
 interface GenerateMockResponseProps<T>
   extends Partial<Omit<ApiResponse<T>, "data">> {
@@ -36,5 +33,3 @@ export const generateMockResponse = <T>(
     ...resProps,
   };
 };
-
-

@@ -17,6 +17,6 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
-  ],
+, "app/dashbaord/test5/page.jsx"  ],
   "exclude": ["node_modules"]
 }
